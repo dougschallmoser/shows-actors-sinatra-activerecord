@@ -1,3 +1,6 @@
 <h1>Welcome to the Show Creator!</h>
 
-<h3>To view all of the shows, click <a href="/shows">HERE</a>.</h3>
+<p><% @shows.each_with_index do |show, index| %>
+<%= index + 1 %>.
+<a href="/shows/<%= show.id %>"><%= show.title %></a>
+<% end %></p>

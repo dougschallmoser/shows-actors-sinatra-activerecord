@@ -1,0 +1,11 @@
+<h1>Show #<%= @show.id %></h1>
+<br>
+<h2><%= @show.title %></h2>
+<em><%= @show.category %></em>
+
+<p><h3>Actors:</h3>
+    <ul><% @show.actors.each do |actor| %>
+        <h4><li><%= actor.name %> plays "<%= actor.character_name %>"</li></h4>
+        <% end %>
+    </ul>
+</p>
