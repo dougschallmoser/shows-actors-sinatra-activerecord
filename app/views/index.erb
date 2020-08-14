@@ -3,4 +3,7 @@
 <p><% @shows.each_with_index do |show, index| %>
 <%= index + 1 %>.
 <a href="/shows/<%= show.id %>"><%= show.title %></a>
+<br>
 <% end %></p>
+
+<h3>To create a show, click <a href="/shows/new">HERE</a>!</h3>

@@ -5,8 +5,8 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 gem 'rake'
-gem 'activerecord', '6.0.3.2'
-gem 'sinatra-activerecord'
+gem 'activerecord', '6.0.3.2', :require => 'active_record'
+gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'sinatra'
 gem 'pry'
 gem 'sqlite3'

@@ -1,0 +1,34 @@
+<h1>Edit <%= @show.title %></h1>
+
+<form method="POST" action="/shows/<%= @show.id %>"">
+<input type="hidden" id="hidden" name="_method" value="patch"/>
+    <label for="show_title">Show Title:</label>
+    <input type="text" id="show_title" name="show[title]" value="<%= @show.title %>"/>
+    <br>
+    <label for="show_category">Show Category:</label>
+    <input type="text" id="show_category" name="show[category]" value="<%= @show.category %>"/>
+    <br>
+    <p><h2>Actors</h2></p>
+    <h4>Actor 1</h4>
+    <label for="actor1_name">Name:</label>
+    <input type="text" id="actor1_name" name="show[actors][][name]" value="<%= @show.actors[0].name %>"/>
+    <br>
+    <label for="actor1_char_name">Character Name:</label>
+    <input type="text" id="actor1_char_name" name="show[actors][][character_name]" value="<%= @show.actors[0].character_name %>"/>
+    <p>
+    <h4>Actor 2</h4>
+    <label for="actor2_name">Name:</label>
+    <input type="text" id="actor1_name" name="show[actors][][name]" value="<%= @show.actors[1].name %>"/>
+    <br>
+    <label for="actor2_char_name">Character Name:</label>
+    <input type="text" id="actor2_char_name" name="show[actors][][character_name]" value="<%= @show.actors[1].character_name %>"/>
+    </p><p>
+    <h4>Actor 3</h4>
+    <label for="actor3_name">Name:</label>
+    <input type="text" id="actor1_name" name="show[actors][][name]" value="<%= @show.actors[2].name %>"/>
+    <br>
+    <label for="actor3_char_name">Character Name:</label>
+    <input type="text" id="actor3_char_name" name="show[actors][][character_name]" value="<%= @show.actors[2].character_name %>"/>
+    </p>
+    <input type="submit" value="Submit"/>
+</form>
