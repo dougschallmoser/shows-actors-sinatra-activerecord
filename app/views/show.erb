@@ -9,6 +9,13 @@
     </ul>
 </p>
 <br>
-<h3>To edit this show, click <a href="/shows/<%= @show.id %>/edit">HERE</a>!</h3>
-<h3>To delete this show, click <a href="/shows/<%= @show.id %>/delete">HERE</a>!</h3>
-<h3>To view all shows, click <a href="/shows">HERE</a>!</h3>
+<form method="get" action="/shows/<%=@show.id%>/edit">
+    <input type="submit" value="Edit Post">
+</form>
+<form method="POST" action="/shows/<%=@show.id%>/delete">
+    <input type="hidden" id="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Post">
+</form>
+<form method="get" action="/shows">
+    <input type="submit" value="View all">
+</form>

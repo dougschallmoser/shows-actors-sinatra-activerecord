@@ -48,8 +48,8 @@ class Application < Sinatra::Base
         redirect "/shows/#{show.id}"
     end 
 
-    get '/shows/:id/delete' do
-        Show.find(params[:id]).destroy
+    delete '/shows/:id/delete' do
+        Show.find(params[:id]).delete
         redirect "/shows"
     end 
 
