@@ -42,8 +42,8 @@ class Application < Sinatra::Base
         show = Show.find(params[:id])
         show.update(title: params[:show][:title], category: params[:show][:category])
 
-        params[:show][:actors].each do |actor_details|
-            show.actors.update(actor_details)
+        params[:show][:actors].each_with_index do |actor_details, index|
+            show.actors[index].update(actor_details)
         end 
         redirect "/shows/#{show.id}"
     end 
